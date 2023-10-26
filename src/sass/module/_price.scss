@@ -1,0 +1,103 @@
+@use "global" as *;
+
+.price {
+  position: relative;
+  margin-top: rem(84);
+  background-color: $bg-green;
+  // z-index: -1;
+  @include mq(md) {
+    margin-top: rem(145);
+    z-index: initial;
+  }
+}
+
+.price__inner {
+  padding-top: rem(84);
+  padding-left: rem(15);
+  padding-right: rem(15);
+  padding-bottom: rem(83);
+  @include mq(md) {
+    position: relative;
+    max-width: rem(1130);
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
+    width: 100%;
+    margin: auto;
+    padding-bottom: rem(104);
+    padding-top: rem(99);
+  }
+}
+
+.price__inner::before {
+  display: none;
+  @include mq(md) {
+    background-image: url(../images/common/price_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: 100%;
+    left: calc(50% - min(50vw, 38.75rem));
+    max-width: rem(437);
+    position: absolute;
+    top: rem(928);
+    width: calc( 437 / 1080 * 100%);
+  }
+}
+
+.price__content {
+  @include mq(md) {
+    display: flex;
+    flex-direction:row-reverse;
+    column-gap: calc(93 / 1080 * 100%);
+    margin-top: rem(40);
+  }
+}
+.price__content div .price__sp {
+  display: block;
+  @include mq(md) {
+    display: none;
+  }
+}
+.price__content div .price__pc {
+  display: none;
+  @include mq(md) {
+    display: block
+  }
+}
+.price__img.js-inview {
+  margin-top: rem(28);
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.price__img {
+  margin-top: rem(24);
+  @include mq(md) { 
+    width: rem(492);
+    width: calc( 492 / 1080 * 100%);
+    margin-top: rem(0);
+  }
+}
+
+.price__info {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(0);
+    width: calc( 492 / 1080 * 100%);
+  }
+
+}
+.price__btn {
+  text-align: center;
+  margin-top: rem(36);
+  position: relative;
+  z-index: 10;
+  @include mq(md) {
+    margin-top: rem(50);
+  }
+}
+
+
+

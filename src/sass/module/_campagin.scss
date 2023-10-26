@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.campaign {
+  margin-top: rem(45);
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}
+
+.campaign .swiper-slide:first-child {
+  margin-left: 14px;
+  @include mq(md) {
+    margin-left: rem(180);
+  }
+}
+
+.campaign__inner {
+  // padding: 0 $padding-sp;
+  // padding: 0;
+  // @include mq(md) {
+  //   padding: 0 $padding-pc;
+  // }
+}
+
+.campaign__items {
+  margin-top: rem(28);
+  position: relative;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  @include mq(md) {
+    margin-top: rem(38);
+  }
+}
+
+.campaign__container {
+  position: relative;
+  padding-bottom: 10px;
+  overflow: hidden; // 2.代わりに親要素で hidden にする
+  .swiper {
+    overflow: visible; // 1.はみ出させるように visible で上書き
+  }
+
+}
+.campaign__btn {
+  text-align: center;
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(71);
+  }
+}
