@@ -75,9 +75,18 @@
 .price__img {
   margin-top: rem(24);
   @include mq(md) { 
-    width: rem(492);
     width: calc( 492 / 1080 * 100%);
+    object-fit: cover;
     margin-top: rem(0);
+  }
+}
+
+.price__img img {
+  aspect-ratio: 345 / 227;
+  object-fit: cover;
+  width: 100%;
+  @include mq(md) {
+    aspect-ratio: 492 / 746;
   }
 }
 
