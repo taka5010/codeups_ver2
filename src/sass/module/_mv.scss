@@ -24,11 +24,14 @@
 .mv__text {
   position: absolute;
   left: 50%;
-  top: 56%;
-  transform: translate(-48%, -46%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-family: $en-font-family;
   color: $white;
   z-index: 500;
+  @include mq(md) {
+    transform: translate(-48%, -46%);
+  }
 }
 
 .mv__maintitle {

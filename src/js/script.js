@@ -18,10 +18,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       loop: true,
       spaceBetween: 30,
       centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // },
     });
 
     //campaignのswiper

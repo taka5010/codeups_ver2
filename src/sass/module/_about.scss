@@ -76,15 +76,11 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    // right: -98px;
-    // bottom: -60px;
     width: rem(194);
     height: auto;
     width: 18%;
-    // right: -24%;
     top: 155%;
     right:calc(50% - min(50vw,rem(559)));
-    // right:calc(50% - 50vw);
   }
 }
 
@@ -102,17 +98,11 @@
     position: absolute;
     z-index: 505;
     max-width: calc(840 / 880 * 100%);
-    // width: 100%;
-    // width: calc(840 / 880 * 100%);
+    width: calc(840 / 880 * 100%);
     left: 9.2%;
     top: 50%;
     transform: translateY(-50%);
     margin-top: rem(43);
-
-    // transform: translate(-50%, -50%);
-    // z-index: 505;
-    // width: 100%;
-    // left: 50%;
   }
 }
 .about__header {

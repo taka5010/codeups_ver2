@@ -32,8 +32,8 @@ footer {
   top: rem(-65);
   right: rem(15);
   @include mq(md) {
-    top: rem(-150);
-    right: 0;
+    top: rem(-98);
+    right: rem(19);
   }
   // right: 0;
 }

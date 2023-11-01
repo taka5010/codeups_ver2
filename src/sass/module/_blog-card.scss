@@ -8,6 +8,10 @@
   width: 100%;
   background-color: white;
   flex-grow: 1; 
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 24px;
+  padding-right: 16px;
 }
 
 .blog-card__img {
@@ -26,7 +30,6 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: rem(16);
 }
 
 .blog-card__header {
@@ -49,4 +52,5 @@
 
 .blog-card__text {
   font-size: rem(16);
+  padding-top: 20px;
 }
