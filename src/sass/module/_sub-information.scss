@@ -1,14 +1,11 @@
 @use "global" as *;
 
-.information {
+.sub-information {
   position: relative;
   margin-top: rem(85);
-  background-color: $bg-green;
   padding-top: rem(84);
   padding-bottom: rem(84);
-  // z-index: -2;
   z-index: initial;
-  // position: relative;
   @include mq(md) {
     margin-top: rem(140);
     padding-top: rem(100);
@@ -18,7 +15,7 @@
 
 }
 
-.information__inner {
+.sub-information__inner {
   padding-left: rem(15);
   padding-right: rem(15);
   @include mq(md) {
@@ -27,8 +24,26 @@
   }
 }
 
-.information__content {
+.sub-information__list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: rem(20);
+  text-align: center;
+}
+
+.sub-information__list li {
+  background-color: $bg-green;
+  font-size: rem(14);
+  color: $green;
+  padding: rem(10) rem(14);
+  white-space: nowrap;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sub-information__content {
+  border: 1px solid $green;
   margin-top: rem(28);
+  padding: rem(24);
   @include mq(md) {
     display: flex;
     justify-content: center;
@@ -39,7 +54,7 @@
     margin-top: rem(38);
   }
 }
-.information__img {
+.sub-information__img {
   margin-top: rem(24);
   width: 100%;
   @include mq(md) {
@@ -49,21 +64,13 @@
 
 }
 
-.information__img img {
+.sub-information__img img {
   aspect-ratio: 345 / 227;
   object-fit: cover;
 }
 
-.information__img.js-inview {
-  // margin-bottom: rem(23);
-  margin: 0;
-  @include mq(md) {
-    // margin-top: rem(38);
-  }
-}
-
-.information__text {
-  margin-top: rem(25);
+.sub-information__text {
+  // margin-top: rem(25);
   @include mq(md) {
     margin-top: rem(0);
     margin-left: rem(48);
@@ -72,12 +79,12 @@
   }
 }
 
-.information__header {
+.sub-information__header {
   border-bottom: 1px solid $green;
   padding-bottom: 3px;
 }
 
-.information__title {
+.sub-information__title {
   font-size: rem(20);
   font-weight: $bold;
   line-height: calc(24 / 20);
@@ -87,28 +94,33 @@
   }
 }
 
-.information__body {
+.sub-information__body {
   margin-top: rem(8);
   font-size: rem(16);
   line-height: calc( 24 / 16);
 }
 
-.information__btn {
+.sub-information__btn {
   text-align: center;
   padding-top: rem(40);
   position: relative;
   Z-INDEX: 10000;
 }
 
-// information-page
+// sub-information-page
 
-.information__list{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: rem(20);
-  text-align: center;
+
+
+// test
+
+.tab {
+  display: none;
 }
-
-.information__list li {
-  background-color: $bg-green;
+.tab-button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+.tab-button.active {
+  background-color: #ccc;
 }

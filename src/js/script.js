@@ -67,6 +67,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             }
       });
     });
+
+
+//information-page ----------------------------
+
+$(document).ready(function(){
+  $('.tab-button').click(function(){
+      var tab_id = $(this).attr('id');
+
+      $('.tab-button').removeClass('active');
+      $('.tab').hide();
+
+      $(this).addClass('active');
+      $("#content" + tab_id.substr(3)).fadeIn();
+  });
+
+  $('#tab1').trigger('click');
+});
+
 });
 
 
