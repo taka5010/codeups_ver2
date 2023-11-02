@@ -7,7 +7,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   @include mq(md) {
-    height: initial;
+    height: rem(548);
+    background-image: url(../images/common/mv-info-pc.jpg);
     // padding-top: calc( 768 / 1440 * 100%);
   }
 }

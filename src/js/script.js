@@ -72,17 +72,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 //information-page ----------------------------
 
 $(document).ready(function(){
-  $('.tab-button').click(function(){
+  $('.js-info').click(function(){
       var tab_id = $(this).attr('id');
 
-      $('.tab-button').removeClass('active');
+      $('.js-info').removeClass('active');
       $('.tab').hide();
 
       $(this).addClass('active');
-      $("#content" + tab_id.substr(3)).fadeIn();
+      $("#info-content" + tab_id.substr(8)).fadeIn(500);
   });
 
-  $('#tab1').trigger('click');
+  $('#info-tab1').trigger('click');
 });
 
 });
