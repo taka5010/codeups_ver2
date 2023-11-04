@@ -43,7 +43,6 @@
   font-family: $en-font-family;
   text-transform: capitalize;
   color: $white;
-  padding: 0  calc( 20 / 1440 * 100vw);
   // margin-left: rem(40);
   // min-width: rem(90);
   // width: 100%;
@@ -59,8 +58,7 @@
   @include mq(md) {
     display: inline-block;
     height: inherit;
-    // padding-top: rem(26);
-    // padding-bottom: rem(26);
+    padding: 0  calc( 20 / 1440 * 100vw);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,21 +73,9 @@
   position: relative;
 }
 
-// .pc-nav__item a::before {
-//   position: absolute;
-//   content: "";
-//   content:attr(data-en);
-//   top:20px;
-//   left:50%;
-//   transform:translateX(-50%);
-//   font-size:10px;
-//   width: inherit;
-// }
-
 .pc-nav__item span {
   font-size: rem(10);
-  padding-top: 9px;
+  margin-top: 9px;
   display: inline-block;
-  // line-height: calc(15 / 10);
 }
 

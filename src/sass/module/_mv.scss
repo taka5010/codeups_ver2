@@ -30,15 +30,15 @@
   color: $white;
   z-index: 500;
   @include mq(md) {
-    transform: translate(-48%, -46%);
+    transform: translate(-50%, -50%);
   }
 }
 
 .mv__maintitle {
   font-size: rem(40);
   letter-spacing: 0.52em;
-  margin-left: rem(20);
-  font-weight: &bold;
+  text-indent: 0.52em;
+  font-weight: $bold;
   line-height: 1;
   @include mq(md) {
     font-size: rem(80);
@@ -49,9 +49,6 @@
 .mv__subtitle {
   font-size: rem(20);
   text-align: center;
-  @include mq(md) {
-    margin-right: rem(23);
-  }
 }
 
 .mv__swiper {
