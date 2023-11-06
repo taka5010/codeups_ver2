@@ -14,6 +14,17 @@
   }
 }
 
+.campaign .swiper-slide {
+  height: auto;
+}
+
+.campaign .swiper__item {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+}
+
 .campaign__inner {
   // padding: 0 $padding-sp;
   // padding: 0;

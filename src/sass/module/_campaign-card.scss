@@ -1,7 +1,11 @@
 @use "global" as *;
 
-.campaign.campaign-card {
+
+.campaign-card {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
 }
 
 .campaign-card__wrapper {
@@ -13,20 +17,6 @@
   width: 100%;
 
 }
-
-// .campaign-card__img::before {
-//   padding-top: calc(188 / 288 * 100% );
-//   content: "";
-//   display: block;
-// }
-
-// .campaign-card__img img {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   object-fit: cover;
-// }
 
 .campaign-card__img {
   width: 100%;
@@ -40,9 +30,17 @@
 .campaign-card__header {
   border-bottom: 1px solid $green;
   padding-bottom: rem(10);
+
+  // display: flex;
+  // flex-direction: column;
+  // flex-grow: 1;
 }
 
 .campaign-card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
   padding: rem(19) rem(16) rem(16) rem(16) ;
   @include mq(md) {
     padding: rem(28) rem(16) rem(29) rem(16) ;
@@ -69,10 +67,10 @@
   line-height: calc(24 / 19);
   margin-top: rem(6);
 
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1; 
-  overflow: hidden;
+  // display: -webkit-box;
+  // -webkit-box-orient: vertical;
+  // -webkit-line-clamp: 1; 
+  // overflow: hidden;
 }
 
 .campaign-card__text {
@@ -125,3 +123,4 @@
     font-size: rem(40);
   }
 }
+

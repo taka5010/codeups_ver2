@@ -98,8 +98,9 @@
     position: absolute;
     z-index: 505;
     max-width: calc(840 / 880 * 100%);
-    width: calc(840 / 880 * 100%);
-    left: 9.2%;
+    // width: calc(840 / 880 * 100%);
+    left:calc(50% - 32%);
+    // margin-left: 17%;
     top: 50%;
     transform: translateY(-50%);
     margin-top: rem(43);
@@ -122,6 +123,7 @@
 .about__body {
   margin-top: rem(16);
   @include mq(md) {
+    max-width: calc(400 / 880 * 100%);
     margin-top: 0;
   }
 }
@@ -130,6 +132,7 @@
   line-height: calc(24 / 16);
   @include mq(md) {
     max-width: rem(400);
+    
     width: 100%;
     color: $white;
     margin-left: 20px;
