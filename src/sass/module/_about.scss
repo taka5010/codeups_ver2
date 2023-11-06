@@ -21,6 +21,21 @@
   
 }
 
+.about__inner::before {
+  background-image: url(../images/common/about_art.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  right: calc(50% - min(50vw, 637px));
+  padding-bottom: calc(181 / 1130 * 100%);
+  position: absolute;
+  bottom: -88px;
+  max-width: rem(194);
+  width: calc(194 / 1130 * 100%);
+  z-index: 500;
+}
+
 .about__images {
   display: flex;
   justify-content: center;

@@ -9,15 +9,11 @@
   background-color: $green;
   width: 100%;
   height: 100vh; 
-  // transform: translateX(-100%);←ここの値を変えることで右からだったり、上からだったり変更可能
-  // transition: ease .3s;
   color: $white; 
   padding: rem(105) rem(37) rem(100) rem(37);
-
+  overflow-y: scroll;
+  overflow-x: hidden;
   }
-  // .sp-nav.is-open {
-  // transform: translateX(0);
-  // }
 
   .sp-nav__lists {
     display: flex;

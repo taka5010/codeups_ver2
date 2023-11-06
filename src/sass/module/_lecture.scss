@@ -6,6 +6,7 @@
 
 .lecture + .lecture {
   margin-top: rem(36);
+  margin-top: rem(40);
 }
 
 .lecture__name {
@@ -26,17 +27,20 @@
   justify-content: space-between;
   font-size: rem(14);
   line-height: calc(24 / 14);
-  padding-top: rem(4);
-  padding-bottom: rem(4);
+  margin-top: rem(8);
+  margin-bottom: rem(8);
   @include mq(md) {
     font-size: rem(16);
-    padding-top: rem(2);
-    padding-bottom: rem(2);
+    margin-top: rem(4);
+    margin-bottom: rem(4);
   }
 }
 
 .lecture__menu:first-of-type {
-  padding-top: rem(8);
+  margin-top: rem(8);
+  @include mq(md) {
+    margin-top: rem(6);
+  }
 }
 
 .lecture__pay {

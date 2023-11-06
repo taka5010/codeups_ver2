@@ -3,6 +3,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     //ナビバートグル
     $('.js-hamburger').on('click', function () {
+      $("body").toggleClass("active");
       if ($('.js-hamburger').hasClass('is-open')) {
         $('.js-drawer-menu').fadeOut();
         $(this).removeClass('is-open');

@@ -50,3 +50,9 @@ $drawer-color: #fff; //ドロワー線の色
 html {
   scroll-behavior: smooth;
 }
+
+//ドロワーメニュー展開時に背景固定
+body.active {
+  height: 100%;
+  overflow: hidden;
+}
