@@ -9,26 +9,112 @@
 }
 
 .sub-about__img:nth-child(6n + 1) {
-    grid-area: 1 / 1 / 3 / 2;
+    // grid-area: 1 / 1 / 3 / 2;
 }
 
 .sub-about__img:nth-child(6n + 2) {
-    grid-area: 1 / 2 / 2 / 3;
+    // grid-area: 1 / 2 / 2 / 3;
 
 }
 
 .sub-about__img:nth-child(6n + 3) {
-    grid-area: 2 / 2 / 3 / 3;
+    // grid-area: 2 / 2 / 3 / 3;
 }
 
 .sub-about__img:nth-child(6n + 4) {
-    grid-area: 3 / 1 / 4 / 2;
+    // grid-area: 3 / 1 / 4 / 2;
 }
 
 .sub-about__img:nth-child(6n + 5) {
-    grid-area: 4 / 1 / 5 / 2; 
+    // grid-area: 4 / 1 / 5 / 2; 
 }
 
 .sub-about__img:nth-child(6n + 6) {
-    grid-area: 3 / 2 / 5 / 3; 
+    // grid-area: 3 / 2 / 5 / 3; 
 }
+
+
+// test
+
+.about-galleryimage-items {
+    display: grid;
+    gap: rem(8);
+    grid-auto-flow: dense;
+    @include mq("md") {
+      grid-template-columns: repeat(11, 1fr);
+    }
+  }
+
+.about-galleryimage-item:nth-child(6n + 1),
+.about-galleryimage-item:nth-child(6n + 6) {
+  grid-row: span 2;
+  @include mq("md") {
+    grid-column: span 5;
+  }
+}
+
+.about-galleryimage-item:nth-child(6n + 2),
+.about-galleryimage-item:nth-child(6n + 3),
+.about-galleryimage-item:nth-child(6n + 4),
+.about-galleryimage-item:nth-child(6n + 5) {
+  grid-row: span 1;
+  @include mq("md") {
+    grid-column: span 6;
+  }
+}
+
+
+  .about-galleryimage-item:nth-child(6n + 1) img,
+.about-galleryimage-item:nth-child(6n + 6) img {
+  aspect-ratio: 345 / 524;
+  width: 100%;
+  height: 100%;
+  @include mq("md") {
+    aspect-ratio: 492 / 746;
+  }
+}  
+
+
+// hirokiさん
+// .about-galleryimage-items {
+//     display: grid;
+//     grid-auto-rows: 1fr;
+//     gap: rem(8);
+//     @include mq("md") {
+//       grid-template-columns: repeat(9, 1fr);
+//       grid-auto-flow: dense;
+//     }
+//   }
+  
+//   .about-galleryimage-item:nth-child(6n + 1) {
+//     grid-row: span 2;
+//     @include mq(md) {
+//       grid-row: span 4;
+//       grid-column: span 4;
+//     }
+//   }
+  
+//   .about-galleryimage-item:nth-child(6n + 2),
+//   .about-galleryimage-item:nth-child(6n + 3) {
+//     grid-row: span 1;
+//     @include mq(md) {
+//       grid-row: span 2;
+//       grid-column: span 5;
+//     }
+//   }
+  
+//   .about-galleryimage-item:nth-child(6n + 4),
+//   .about-galleryimage-item:nth-child(6n + 5) {
+//     grid-row: span 1;
+//     @include mq(md) {
+//       grid-row: span 2;
+//       grid-column: span 5;
+//     }
+//   }
+//   .about-galleryimage-item:nth-child(6n) {
+//     grid-row: span 2;
+//     @include mq(md) {
+//       grid-row: span 4;
+//       grid-column: span 4;
+//     }
+//   }
