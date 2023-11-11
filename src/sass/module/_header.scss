@@ -2,9 +2,12 @@
 
 header {
   position: fixed;
-  height: rem(90);
+  height: rem(80);
   width: 100%;
   z-index: 999;
+  @include mq(md) {
+    height: rem(90);
+  }
 }
 .header__inner {
   display: flex;

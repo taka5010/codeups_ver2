@@ -91,56 +91,90 @@
   <main>
     <div class="about-mv">
       <div class="about-mv__text">
-        <p class="about-mv__maintitle">information</p>
+        <p class="about-mv__maintitle">about us</p>
       </div>
     </div>
     <div class="about-breadcrumb">
       <div class="about-breadcrumb__inner inner">
-        <p class="about-breadcrumb__text">TOP > 私たちについて</p><!-- /.about-breadcrumb__text -->
+        <p class="about-breadcrumb__text">TOP > 私たちについて</p><!-- /.t-about-breadcrumb__text -->
       </div><!-- /.about__inner -->
     </div><!-- /.about__breadcrumb -->
-    <section class="about-content">
-      <div class="about-content__inner inner">
-        <div class="about-content__text">
-            <div class="about-content__header">
-              <p class="about-content__title">Dive into <br>the Ocean</p>
+    <!-- <section class="t-about-content">
+      <div class="t-about-content__inner inner">
+        <div class="t-about-content__text">
+            <div class="t-about-content__header">
+              <p class="t-about-content__title">Dive into <br>the Ocean</p>
             </div>
-            <div class="about-content__body">
-              <p class="about-content__detail">
+            <div class="t-about-content__body">
+              <p class="t-about-content__detail">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
               </p>
-            </div><!-- /.about-content__text -->
-        </div><!-- /.about-content__text -->
-      </div><!-- /.about-content__inner -->
-    </section><!-- /.about-content -->
+            </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <section class="about-content">
+      <div class="about-content__inner inner">
+        <div class="about-content__images">
+          <picture class="about-content__left-image">
+            <source srcset="./assets/images/common/about_img-left-pc.jpg" alt="シーサーの画像" media="(min-width: 768px)" type="image/png">
+            <img src="./assets/images/common/about_img-left-sp.jpg" alt="シーサーの画像">
+          </picture>
+          <picture class="about-content__right-image">
+            <source srcset="./assets/images/common/about_img-right-pc.jpg" alt="シーサーの画像" media="(min-width: 768px)" type="image/png">
+            <img src="./assets/images/common/about_img-right-sp.jpg" alt="海中の魚の画像">
+          </picture>
+        </div>
+        <div class="about-content__text">
+          <div class="about-content__header">
+            <p class="about-content__title">Dive into <br>the Ocean</p>
+          </div>
+          <div class="about-content__body">
+            <p class="about-content__detail">
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
     <section class="about-gallery">
-      <div class="sub-about__inner inner">
-        <div class="sub-about__contents">
-          <div class="about-galleryimage-items">
-            <div class="about-galleryimage-item">
-              <img src="./assets/images/common/aboutus-gallery1-sp.jpg" alt="">
-            </div><!-- /.about-galleryimage-item -->
-            <div class="about-galleryimage-item">
-              <img src="./assets/images/common/aboutus-gallery2-sp.jpg" alt="">
-            </div><!-- /.about-galleryimage-item -->
-            <div class="about-galleryimage-item">
-              <img src="./assets/images/common/aboutus-gallery3-sp.jpg" alt="">
-            </div><!-- /.about-galleryimage-item -->
-            <div class="about-galleryimage-item">
-              <img src="./assets/images/common/aboutus-gallery4-sp.jpg" alt="">
-            </div><!-- /.about-galleryimage-item -->
-            <div class="about-galleryimage-item">
-              <img src="./assets/images/common/aboutus-gallery5-sp.jpg" alt="">
-            </div><!-- /.about-galleryimage-item -->
-            <div class="about-galleryimage-item">
-              <img src="./assets/images/common/aboutus-gallery6-sp.jpg" alt="">
-            </div><!-- /.about-galleryimage-item -->
-          </div><!-- /.sub-about__content -->
-        </div><!-- /.sub-about__contents -->
+      <div class="about-gallery__inner inner">
+        <div class="about-gallery__header section-header">
+          <p class="section-header__entitle">gallery</p>
+          <h2 class="section-header__jatitle">フォト</h2>
+        </div>
+        <div class="about-gallery__items">
+          <div class="about-gallery__item js-modal">
+            <img src="./assets/images/common/aboutus-gallery1-sp.jpg" alt="">
+          </div><!-- /.about-gallery__item -->
+          <div class="about-gallery__item js-modal">
+            <img src="./assets/images/common/aboutus-gallery2-sp.jpg" alt="">
+          </div><!-- /.about-gallery__item -->
+          <div class="about-gallery__item js-modal">
+            <img src="./assets/images/common/aboutus-gallery3-sp.jpg" alt="">
+          </div><!-- /.about-gallery__item -->
+          <div class="about-gallery__item js-modal">
+            <img src="./assets/images/common/aboutus-gallery4-sp.jpg" alt="">
+          </div><!-- /.about-gallery__item -->
+          <div class="about-gallery__item js-modal">
+            <img src="./assets/images/common/aboutus-gallery5-sp.jpg" alt="">
+          </div><!-- /.about-gallery__item -->
+          <div class="about-gallery__item js-modal">
+            <img src="./assets/images/common/aboutus-gallery6-sp.jpg" alt="">
+          </div><!-- /.about-gallery__item -->
+        </div><!-- /.sub-about__content -->
       </div><!-- /.sub-about__inner -->
+      <div class="about-gallery__grayDisplay"></div>
     </section><!-- /.sub-about -->
-    <section class="contact">
+    <section class="about-contact contact">
       <div class="contact__inner inner">
         <div class="contact__content">
           <div class="contact__company">
@@ -157,7 +191,7 @@
                 <li>定休日:毎週火曜日</li>
               </ul>
               <div class="contact__map">
-                <img src="./assets/images/common/contact_img.jpg" alt="ダミー画像">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.1847939799914!2d127.69622957604201!3d26.22318447706502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bdf13102165%3A0x68b9bdf87a868a63!2zTGVxdWlvcywg77yR5LiB55uuLe-8kSDnnJ_lmInmr5Qg6YKj6KaH5biCIOaylue4hOecjCA5MDItMDA2OA!5e0!3m2!1sja!2sjp!4v1699297920443!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
@@ -176,8 +210,17 @@
         </div>
       </div>
     </section>
+<!-- ------------------------test -->
+
+
+
+
+
+<!-- test-finish -->
+
+
   </main>
-  <footer>
+  <footer class="about__footer">
     <div class="footer__inner">
       <div class="footer__pageTop">
         <a href="#"><span class="top-btn"></span></a>   

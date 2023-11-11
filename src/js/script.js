@@ -91,7 +91,36 @@ $(document).ready(function(){
   $('#info-tab1').trigger('click');
 });
 
+  // galleryのモーダル
+  $(".js-modal img").click(function () {
+    $(".about-gallery__grayDisplay").html($(this).prop("outerHTML"));
+    $(".about-gallery__grayDisplay").fadeIn(200);
+    return false;
+  });
+  $(".about-gallery__grayDisplay").click(function () {
+    $(".about-gallery__grayDisplay").fadeOut(200);
+    return false;
+  });
+
+  // モーダル展開時に背景をスクロールさせない
+  let scrollPosition;
+  $(".js-modal img").on("click", function () {
+    scrollPosition = $(window).scrollTop();
+    $("body").addClass("about-gallery__fixed").css({ top: -scrollPosition });
+  });
+  $(".about-gallery__grayDisplay").on("click", function () {
+    $("body").removeClass("about-gallery__fixed").css({ top: 0 });
+    $(window).scrollTop(scrollPosition);
+  });
+
+
 });
+
+
+// test
+
+
+
 
 
 
