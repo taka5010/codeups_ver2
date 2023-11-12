@@ -3,12 +3,12 @@
 .voice-mv {
   position: relative;
   height: rem(460);
-  background-image: url(../images/common/mv-info-sp.jpg);
+  background-image: url(../images/common/voice_mv-sp.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   @include mq(md) {
     height: rem(548);
-    background-image: url(../images/common/mv-info-pc.jpg);
+    background-image: url(../images/common/voice_mv-pc.jpg);
     // padding-top: calc( 768 / 1440 * 100%);
   }
 }

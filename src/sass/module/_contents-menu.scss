@@ -12,12 +12,13 @@
     color: $green;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 14px;
+    column-gap: rem(20);
+    row-gap: rem(14);
     text-align: center;
     transform: 0.5s;
     @include mq(md) {
         grid-template-columns: repeat(4, 1fr);
+        column-gap: rem(32); 
     }
 }
 

@@ -22,7 +22,7 @@
 
 .about-content__inner::before {
   position: absolute;
-  background-image: url(../images/common/aboutus-logo-1.png);
+  background-image: url(../images/common/contents-logo-1.png);
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -43,7 +43,7 @@
   display: none;
   @include mq(md) {
     position: absolute;
-    background-image: url(../images/common/aboutus-logo-2.png);
+    background-image: url(../images/common/contents-logo-2.png);
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
