@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.voice-mv {
+  position: relative;
+  height: rem(460);
+  background-image: url(../images/common/mv-info-sp.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq(md) {
+    height: rem(548);
+    background-image: url(../images/common/mv-info-pc.jpg);
+    // padding-top: calc( 768 / 1440 * 100%);
+  }
+}
+
+.voice-mv img {
+  @include mq(md) {
+    aspect-ratio: 1440 / 768;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.voice-mv__inner {
+  height: inherit;
+}
+
+.voice-mv__text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: $en-font-family;
+  color: $white;
+  z-index: 500;
+  @include mq(md) {
+    transform: translate(-50%, 25%);
+  }
+}
+
+.voice-mv__maintitle {
+  font-size: rem(40);
+  // margin-left: rem(20);
+  font-weight: bold;
+  line-height: 1;
+  text-transform: lowercase;
+  white-space: nowrap;
+  @include mq(md) {
+    font-size: rem(80);
+    line-height: 1;
+    letter-spacing: -0.06em;
+  }
+}
+.voice-mv__maintitle::first-letter {
+  text-transform: capitalize;
+}

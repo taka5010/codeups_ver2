@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.wp-pagenavi {
+    clear: both;
+    text-align: center;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+    color: $green;
+    background-color: #FFFFFF;
+    padding: 6px 14px;
+    margin: 0 4px;
+    white-space: nowrap;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid $green;
+}
+
+.wp-pagenavi span.current {
+    color: #fff;
+    background-color: $green;
+}
