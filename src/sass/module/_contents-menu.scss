@@ -15,7 +15,6 @@
     column-gap: rem(20);
     row-gap: rem(14);
     text-align: center;
-    transform: 0.5s;
     @include mq(md) {
         grid-template-columns: repeat(4, 1fr);
         column-gap: rem(32); 
@@ -26,10 +25,12 @@
     padding: 6px 25px;
     border: 1px solid $green;
     white-space: nowrap;
+    background-color: $white;
 }
 
 .contents-menu__item:hover {
     background-color: $green;
     color: $white;
     transition: 0.5s;
+    
 }
