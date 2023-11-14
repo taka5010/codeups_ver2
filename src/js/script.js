@@ -112,8 +112,6 @@ $(document).ready(function(){
     $("body").removeClass("about-gallery__fixed").css({ top: 0 });
     $(window).scrollTop(scrollPosition);
   });
-
-
 });
 
 
