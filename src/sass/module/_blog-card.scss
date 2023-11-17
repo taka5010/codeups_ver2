@@ -33,7 +33,8 @@
 }
 
 .blog-card__header {
-  padding: rem(17) 0 rem(5);
+  margin-top: rem(17);
+  padding-bottom: rem(5);
   border-bottom: 1px solid $green;
 }
 
@@ -50,7 +51,9 @@
   margin-top: rem(3);
 }
 
+.blog-card__info {
+  margin-top: rem(20);
+}
 .blog-card__text {
   font-size: rem(16);
-  margin-top: 20px;
 }

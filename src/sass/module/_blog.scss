@@ -4,7 +4,7 @@
   padding-top: rem(82);
   @include mq(md) {
     position: relative;
-    padding-top: 0;
+    padding-top: rem(99);
   }
 }
 
@@ -14,11 +14,11 @@
     content: "";
     display: inline-block;
     background-image: url(../images/common/blog_bg.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    // border: 1px solid #cccc;
     width: 100%;
-    height: (500 / 1440) * 100vw;
+    height: rem(500);
+    top: 0;
   }
   
 }
@@ -34,7 +34,6 @@
     margin-left: auto;
     padding-left: rem(25);
     padding-right: rem(25);
-    padding-top: rem(99);
   }
 }
 
@@ -47,7 +46,7 @@
     display: block;
     position: absolute;
     top: rem(23);
-    left:calc(50% - min(50vw,rem(620)));
+    left:calc(50% - min(48vw,rem(620)));
     max-width: rem(376.51);
     width: calc(376.51 / 1080 * 100%);
     height: 100%;

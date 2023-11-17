@@ -29,6 +29,8 @@ header {
 .hader__logo {
   z-index: 1000;
   height: inherit;
+  display: flex;
+  align-items: center;
   @include mq(md) {
     max-width: rem(133);
     min-width: rem(50);
@@ -42,8 +44,6 @@ header {
 
 .hader__logo a {
   display: inline-block;
-  padding-top: rem(20);
-  padding-bottom: rem(20);
   width: 100%;
 }
 

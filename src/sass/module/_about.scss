@@ -12,8 +12,6 @@
   max-width: rem(600);
   @include mq(md) {
     position: relative;
-    // padding-left: $padding-pc;
-    // padding-right: $padding-pc;
     max-width: rem(1130);
     width: 100%;
     margin: auto;
@@ -27,10 +25,10 @@
   background-size: contain;
   content: "";
   display: block;
-  right: calc(50% - min(50vw, 637px));
+  right: calc(50% - min(48vw, rem(637)));
   padding-bottom: calc(181 / 1130 * 100%);
   position: absolute;
-  bottom: -88px;
+  bottom: rem(-88);
   max-width: rem(194);
   width: calc(194 / 1130 * 100%);
   z-index: 500;
@@ -158,7 +156,6 @@
   text-align: center;
   margin-top: rem(15);
   @include mq(md) {
-    margin-left: rem(20);
     margin-top: rem(40);
   }
 }
