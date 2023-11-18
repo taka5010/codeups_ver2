@@ -42,6 +42,9 @@
 }
 
 .campaign-content__items {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
     margin-top: rem(38);
     position: relative;
     z-index: 0;
@@ -50,7 +53,6 @@
     margin-left: auto;
     margin-right: auto;
     @include mq(md) {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 40px;
         row-gap: 80px;
@@ -58,6 +60,10 @@
         width: 100%;
     }
 }
+
+.campaign-content__items--campaign {
+    row-gap: rem(38);
+} 
 
 .campaign-content__item.campaign__container +.campaign-content__item.campaign__container {
     margin-top: rem(38);
