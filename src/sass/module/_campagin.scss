@@ -26,11 +26,7 @@
 }
 
 .campaign__inner {
-  // padding: 0 $padding-sp;
-  // padding: 0;
-  // @include mq(md) {
-  //   padding: 0 $padding-pc;
-  // }
+
 }
 
 .campaign__items {
@@ -46,9 +42,9 @@
 .campaign__container {
   position: relative;
   padding-bottom: 10px;
-  overflow: hidden; // 2.代わりに親要素で hidden にする
+  overflow: hidden; 
   .swiper {
-    overflow: visible; // 1.はみ出させるように visible で上書き
+    overflow: visible;
   }
 
 }

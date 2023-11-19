@@ -119,52 +119,34 @@
   <main>
     <div class="mv">
       <div class="mv__inner">
-        <div class="mv__swiper swiper js_mv_Swiper u-mobile">
+        <div class="mv__swiper swiper js_mv_Swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <img src="./assets/images/common/mv_img-sp.jpg" alt="横視点のウミガメ画像">
+              <picture>
+                <source srcset="./assets/images/common/mv_img-sp.jpg" media="(max-width: 769px)"  />
+                <img src="./assets/images/common/mv_img-pc.jpg" alt="横視点のウミガメ画像">
+              </picture>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/images/common/mv_img-sp-2.jpg" alt="下視点のウミガメ画像">
+              <picture>
+                <source srcset="./assets/images/common/mv_img-sp-2.jpg" media="(max-width: 769px)"  />
+                <img src="./assets/images/common/mv_img-pc-2.jpg" alt="下視点のウミガメ画像">
+              </picture>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/images/common/mv_img-sp-3.jpg" alt="海上の画像">
+              <picture>
+                <source srcset="./assets/images/common/mv_img-sp-3.jpg" media="(max-width: 769px)"  />
+                <img src="./assets/images/common/mv_img-pc-3.jpg" alt="海上の画像">
+              </picture>
             </div>
             <div class="swiper-slide">
-              <img src="./assets/images/common/mv_img-sp-4.jpg" alt="浜辺の画像">
+              <picture>
+                <source srcset="./assets/images/common/mv_img-sp-4.jpg" media="(max-width: 769px)"  />
+                <img src="./assets/images/common/mv_img-pc-4.jpg" alt="浜辺の画像">
+              </picture>
             </div>
           </div>
         </div>
-        <!-- <div class="mv__swiper swiper js_mv_Swiper u-desktop">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-pc.jpg)" alt="横視点のウミガメ画像"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-pc-2.jpg)" alt="下視点のウミガメ画像"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-pc-3.jpg)" alt="海上の画像">
-            </div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-pc-4.jpg)" alt="浜辺の画像">
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="mv__swiper swiper js_mv_Swiper u-mobile">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-sp.jpg)" alt="横視点のウミガメ画像"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-sp-2.jpg)" alt="下視点のウミガメ画像"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-sp-3.jpg)" alt="海上の画像">
-            </div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-sp-4.jpg)" alt="浜辺の画像">
-            </div>
-          </div>
-        </div>
-        <div class="mv__swiper swiper js_mv_Swiper u-desktop">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-pc.jpg)" alt="横視点のウミガメ画像"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-pc-2.jpg)" alt="下視点のウミガメ画像"></div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-pc-3.jpg)" alt="海上の画像">
-            </div>
-            <div class="swiper-slide" style="background-image: url(./assets/images/common/mv_img-pc-4.jpg)" alt="浜辺の画像">
-            </div>
-          </div>
-        </div> -->
       </div>
       <div class="mv__text">
         <p class="mv__maintitle">DIVING</p>
@@ -177,7 +159,7 @@
           <p class="section-header__entitle">Campaign</p>
           <h2 class="section-header__jatitle">キャンペーン</h2>
         </div>
-        <div class=" campaign__items">
+        <div class=" campaign__items campaign-cards">
           <div class="campaign__container">
             <div class="campaign__swiper swiper js_mySwiper">
               <div class="swiper-wrapper">
@@ -436,7 +418,7 @@
           <p class="section-header__entitle section-header__entitle--blog">blog</p>
           <h2 class="section-header__jatitle section-header__jatitle--blog">ブログ</h2>
         </div>
-        <div class="blog__items">
+        <div class="blog__items blog-cards">
           <a class="blog__link" href="#">
             <div class=" blog__item blog-card">
               <figure class="blog-card__img">
@@ -506,7 +488,7 @@
           <p class="section-header__entitle">voice</p>
           <h2 class="section-header__jatitle">お客様の声</h2>
         </div>
-        <div class="voice__items">
+        <div class="voice__items voice-cards">
           <div class="voice__container">
             <div class="voice__item voice-card">
               <div class="voice-card__header">

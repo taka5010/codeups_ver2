@@ -20,18 +20,21 @@
 }
 
 .about__inner::before {
-  background-image: url(../images/common/about_art.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  content: "";
-  display: block;
-  right: calc(50% - min(48vw, rem(637)));
-  padding-bottom: calc(181 / 1130 * 100%);
-  position: absolute;
-  bottom: rem(-88);
-  max-width: rem(194);
-  width: calc(194 / 1130 * 100%);
-  z-index: 500;
+  display: none;
+  @include mq(md) {
+    background-image: url(../images/common/about_art.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    right: calc(50% - min(48vw, rem(637)));
+    padding-bottom: calc(181 / 1130 * 100%);
+    position: absolute;
+    bottom: rem(-88);
+    max-width: rem(194);
+    width: calc(194 / 1130 * 100%);
+    z-index: 500;
+  }
 }
 
 .about__images {

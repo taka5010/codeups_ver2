@@ -40,10 +40,6 @@
 .voice__items {
   margin-top: rem(44);
   @include mq(md) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    column-gap: rem(40);
     margin-top: rem(30);
   }
 }

@@ -65,9 +65,6 @@
 .blog__items {
   margin-top: rem(28);
   @include mq(md) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: rem(40);
     margin-top: rem(80);
   }
 }
