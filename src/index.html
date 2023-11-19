@@ -554,8 +554,10 @@
         </div>
         <div class="price__content">
           <div class="price__img js-inview">
-            <img class="price__sp" src="./assets/images/common/price_img-sp.jpg" alt="ウミガメの画像">
-            <img class="price__pc" src="./assets/images/common/price_img-pc.jpg" alt="サンゴの画像">
+            <picture>
+              <source srcset="./assets/images/common/price_img-sp.jpg" media="(max-width: 769px)" alt="ウミガメの画像" />
+              <img src="./assets/images/common/price_img-pc.jpg" alt="サンゴの画像">
+            </picture>
           </div>
           <div class="price__info">
             <div class="price__lecture lecture">
