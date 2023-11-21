@@ -35,3 +35,20 @@
     padding-bottom: calc(131 / 1130 * 100%);
   }
 }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 440px;
+  height: 40px;
+}
+
+.container div {
+  width: 40px;
+  height: 40px;
+  background-color: aqua;
+}
+
+.middle {
+  margin: 0 10px;
+}

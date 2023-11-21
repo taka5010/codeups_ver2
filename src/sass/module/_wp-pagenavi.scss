@@ -1,8 +1,9 @@
 @use "global" as *;
 
 .wp-pagenavi {
-    clear: both;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .wp-pagenavi a, .wp-pagenavi span {
