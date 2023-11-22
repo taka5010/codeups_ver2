@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1; 
+  height: 100%;
 }
 
 .campaign-card__wrapper {
@@ -95,6 +96,10 @@
 
 .campaign-card__info {
   margin-top: rem(8);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   @include mq(md) {
     margin-top: rem(16);
   }
