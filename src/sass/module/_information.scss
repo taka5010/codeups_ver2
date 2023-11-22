@@ -87,6 +87,14 @@
   }
 }
 
+.information__title--info {
+  font-size: rem(24);
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: 1.7;
+  }
+}
+
 .information__body {
   margin-top: rem(8);
   font-size: rem(16);
