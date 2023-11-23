@@ -7,16 +7,32 @@
     margin-top: rem(145);
   }
 }
-
-.about__inner {
-  max-width: rem(600);
+.about--sub {
+  margin-top: rem(50);
   @include mq(md) {
     position: relative;
+    margin-top: rem(145);
+  }
+}
+
+.about__inner {
+  position: relative;
+  max-width: rem(600);
+  @include mq(md) {
     max-width: rem(1130);
     width: 100%;
     margin: auto;
   }
-  
+}
+
+.about__inner--sub {
+  position: relative;
+  max-width: rem(600);
+  @include mq(md) {
+    max-width: rem(1130);
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .about__inner::before {
@@ -37,12 +53,41 @@
   }
 }
 
+.about__inner--sub::before {
+  display: none;
+  @include mq(md) {
+    background-image: url(../images/common/price_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    right: calc(50% - min(48vw, rem(637)));
+    padding-bottom: calc(138 / 1130 * 100%);
+    position: absolute;
+    bottom: rem(-180);
+    max-width: rem(301);
+    width: calc(301 / 1130 * 100%);
+    z-index: 500;
+  }
+}
+
+.about__wrapper {
+  position: relative;
+}
+
 .about__images {
   display: flex;
   justify-content: center;
   margin-top: rem(28);
   @include mq(md) {
     margin-top: rem(37);
+  }
+}
+
+.about__images--about {
+  position: relative;
+  @include mq(md) {
+    // margin-top: rem(37);
   }
 }
 
@@ -55,6 +100,19 @@
     width: 100%;
   }
 }
+.about__left-image--about {
+  display: none;
+  max-width: calc(128 / 345 * 100%);
+  z-index: 20;
+  width: 100%;
+  @include mq(md) {
+    display: block;
+    width: calc( 399 / 1080 * 100%);
+    width: 100%;
+  }
+}
+
+
 
 .about__left-image img {
   aspect-ratio: 128 / 194;
@@ -76,6 +134,21 @@
     margin-top: rem(81);
     margin-left: -18.5%;
     width: calc( 880 / 1080 * 100%);
+  }
+}
+.about__right-image--about {
+  margin-left:0;
+  margin-top: 0;
+  // max-width: calc(281 / 345 * 100%);
+  max-width: rem(600);
+  width: 100%;
+  @include mq(md) {
+    // position: relative;
+    // max-width: rem(600);
+    // width: 100%;
+    // margin-top: rem(81);
+    // margin-left: 0;
+    // width: calc( 880 / 1080 * 100%);
   }
 }
 
@@ -136,11 +209,33 @@
   }
 }
 
+.about__header--about {
+  position: absolute;
+  top: rem(25);
+  left: rem(25);
+  color: $white;
+  @include mq(md) {
+    position: initial;
+    font-size: rem(80);
+    line-height: calc( 100 / 80);
+    color: $white;
+  }
+}
+
 .about__body {
   margin-top: rem(16);
   @include mq(md) {
     max-width: calc(400 / 880 * 100%);
     margin-top: 0;
+  }
+}
+
+.about__body--about {
+  // margin-top: rem(16);
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+
   }
 }
 .about__detail {
