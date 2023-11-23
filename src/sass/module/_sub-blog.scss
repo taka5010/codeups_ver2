@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.sub-blog {
+
+}
+
+.sub-blog__inner {
+    display: block;
+    @include mq(md) {
+        // display: grid;
+        display: flex;
+        // grid-template-columns: repeat(2, 1fr);
+        gap: rem(40);
+    }
+}
+
