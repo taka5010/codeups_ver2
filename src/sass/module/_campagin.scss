@@ -48,3 +48,13 @@
     margin-top: rem(71);
   }
 }
+
+.campaign__pagnation {
+  margin-top: rem(78);
+  @include mq(md) {
+      max-width: rem(444);
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
