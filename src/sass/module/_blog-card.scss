@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center; 
+  overflow:hidden; 
 }
 
 .blog-card__img img {
@@ -50,7 +51,7 @@
 
 .blog-card__title {
   font-size: rem(16);
-  font-weight: 500;
+  font-weight: $medium;
   line-height: calc(24 / 19);
   margin-top: rem(3);
 }
@@ -66,7 +67,14 @@
 
 
 .blog-card:hover {
-  opacity: 0.5;
+  // opacity: 0.5;
+}
+.blog-card:hover {
+  .blog-card__img img {
+    transform:scale(1.2,1.2);
+    transition:0.5s all;
+}
+
 }
 // .blog__link:nth-child(n + 2) {
 //   margin-top: rem(40);
