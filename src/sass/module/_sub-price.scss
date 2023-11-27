@@ -3,3 +3,7 @@
 .sub-price {
     margin-top: rem(50);
 }
+
+.sub-price__table + .sub-price__table {
+    margin-top: rem(40);
+}
