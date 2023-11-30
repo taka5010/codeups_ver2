@@ -112,11 +112,49 @@ $(document).ready(function(){
     $("body").removeClass("about-gallery__fixed").css({ top: 0 });
     $(window).scrollTop(scrollPosition);
   });
+
+
 });
 
 
 // test
 
+// let accordionDetails = '.js-details';
+let accordionDetails = '.js-faq-item';
+let accordionSummary = '.js-faq-item__summary';
+let accordionContent = '.js-faq-item__content';
+let speed = 300
+
+$(accordionSummary).each(function() {
+  if ($(this).parent($(accordionDetails)).attr("open")) {
+    $(this).addClass("is-active");
+  }
+
+
+  $(this).on("click", function(event) {
+  	// デフォルトの挙動を無効化
+    event.preventDefault();
+    // summaryにis-activeクラスを切り替え
+    $(this).toggleClass("is-active");
+
+    if ($(this).parent($(accordionDetails)).attr("open")) {
+      // アコーディオンを閉じるときの処理
+      $(this).nextAll($(accordionContent)).slideUp(speed, function() {
+        // アニメーションの完了後にopen属性を取り除く
+        $(this).parent($(accordionDetails)).removeAttr("open");
+      });
+    } else {
+      // アコーディオンを開くときの処理
+      // open属性を付ける
+      $(this).parent($(accordionDetails)).attr("open", "true");
+      // いったんdisplay:none;してからslideDownで開く
+      $(this).nextAll($(accordionContent)).hide().slideDown(speed);
+    }
+  })
+})
+
+
+// test_finish
 
 
 

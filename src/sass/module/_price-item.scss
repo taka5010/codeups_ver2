@@ -6,6 +6,8 @@
     width: 100%;
     @include mq(md) {
         max-width: rem(700);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -20,11 +22,13 @@
 
 .price-item + .price-item {
     margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(77);
+    }
 }
 
 
 .price-item__header {
-    position: relative;
     background-color: $green;
     color: $white;
     font-weight: $bold;
@@ -33,29 +37,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: rem(32);
+    gap: rem(8);
     @include mq(md) {
+        flex-direction: column-reverse;
+        width: calc(200 / 700 * 100%);
         height: initial;
     }
 }
 
 
 .price-item__header::before {
+    display: block;
     background-image: url(../images/common/info_logo1-white.png);
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
-    display: block;
     height: rem(24);
-    position: absolute;
     width: rem(24);
-    display: block;
-    left: calc(50% - rem(72));
+    @include mq(md) {
+        height: rem(64);
+        width: rem(64);
+    }
 }
 
 .price-item__body {
     display: grid;
     grid-template-columns: calc(240 / 345 * 100%) calc(105 / 345 * 100%) ;
+    @include mq(md) {
+        width: calc(502 / 700 * 100%);
+        border-top: 1px solid $green;
+        grid-template-columns: calc(340 / 502 * 100%) calc(162 / 502 * 100%) ;
+    }
 }
 
 .price-item__left {
@@ -64,6 +76,10 @@
     align-items: center;
     text-align: center;
     height: rem(60);
+    @include mq(md) {
+        justify-content: left;
+        padding-left: rem(10);
+    }
 }
 
 .price-item__right {
@@ -72,14 +88,19 @@
     justify-content: right;
     padding-right: rem(15);
 }
-// .price-item dt,
-// .price-item dd {
-//     border: 1px solid $green;
-// }
+
 .price-item dt {
     border-bottom: 1px solid $green;
     border-left: 1px solid $green;
     border-right: 1px solid $green;
+}
+.price-item dt br {
+    display: block;
+    @include mq(md) {
+        display: none;
+    }
+
+
 }
 .price-item dd {
     border-bottom: 1px solid $green;
