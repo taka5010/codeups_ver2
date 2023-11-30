@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.form {
+
+}
+
+.form__inner {
+
+}
+
+.form dl {
+	display: flex;
+	gap: rem(106)
+}
+
+.form dd {
+	width: calc(480 / 700 * 100%);
+}
+
+.form__title {
+	font-weight: $bold;
+	align-items: center;
+	display: flex;
+	gap: rem(8)
+	// line-height: 1;
+}
+
+.form__title span {
+	font-weight: normal;
+	background-color: #C94800;
+	color: $white;
+	font-size: rem(12);
+	padding: rem(0) rem(16);
+	letter-spacing:0.4em;
+	text-indent: 0.4em;
+}
