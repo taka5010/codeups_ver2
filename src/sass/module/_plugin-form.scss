@@ -35,14 +35,14 @@ $radio-space: rem(10);//チェックマークと文字の距離
 $radio-space-betweenRadio: rem(35);//ラジオボタンの間の距離
 
 /*チェックボックスの指定*/
-$check-fz: rem(14);//フォントサイズ
-$check-size: rem(20);//外枠の幅高さ
+$check-fz: rem(16);//フォントサイズ
+$check-size: rem(14);//外枠の幅高さ
 $check-bg-cr: #fff;//外枠の背景色
-$check-border-cr: #f00;//外枠の色
+$check-border-cr: $green;//外枠の色
 $check-bg-cr-inner: #f00;//チェックマークの背景色
-$check-space: rem(5);//チェックマークと文字の距離
+$check-space: rem(7);//チェックマークと文字の距離
 $check-space-betweenRadio: rem(20);//ラジオボタンの間の距離
-$check-weight: 4px;//チェックマークの線の太さ(px)
+$check-weight: 2px;//チェックマークの線の太さ(px)
 
 /*テキストエリアの指定*/
 $textarea-height: rem(255);
@@ -61,7 +61,7 @@ textarea {
 	background-image: none;
 	font-family: inherit;
 	/*↓カスタム */
-  margin-top: rem(10);
+  margin-top: rem(15);
 	font-size: $fz;
 	padding: $padding-und $padding-lnr;
 	width: 100%;
@@ -162,7 +162,7 @@ button,
 		padding: 0 0 0 calc($check-size + $check-space);
 		margin: 0 $check-space-betweenRadio 0 0;
 		font-size: $check-fz;
-		line-height: 1;
+		line-height: 1.6;
 		cursor: pointer;
 		transition: 0.3s ease;
 
@@ -195,8 +195,8 @@ button,
 			opacity: 1;
 			/*チェックマークじゃない場合は以下を変更する*/
 			transform: translateY(-50%) rotate(-45deg);
-			width: calc($check-size * 0.9);
-			height: calc($check-size * 0.5);
+			width: calc($check-size * 0.7);
+			height: calc($check-size * 0.3);
 			margin-top: -0.1em;
 			margin-left: 0.1em;
 			border-left: $check-weight solid $check-bg-cr-inner;
@@ -214,15 +214,16 @@ select {
 	border: none;
 	cursor: pointer;
 	width: 100%;
+	position: relative;
 	/*↓カスタム */
   margin-top: rem(10);
 	font-size: $fz;
 	padding: $padding-und $padding-lnr;
 	background-color: $back-cr;
-  border: 1px solid $border-cr-default;
-  border-radius: $border-r;
+  border: 1px solid $green;
+//   border-radius: $border-r;
 	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
-	appearance: auto;
+	appearance: none;
 	/*↓デフォルトではないアイコンを使う場合は入力する*/
 	// background-image: url();
 	// background-position: right 12px center;
@@ -232,6 +233,19 @@ select {
 	}
 }
 
+select::after {
+	position: absolute;
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	border-top: 10px solid #408f95;
+	border-bottom: 0;
+}
+
+
 [type="date"] {
 	position: relative;
 	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
@@ -240,6 +254,7 @@ select {
 	// background-image: url();
 	// background-position: right 12px center;
 	// background-repeat: no-repeat;
+	
 	&:focus {
 		border-color: 1px solid $border-cr;
 	}

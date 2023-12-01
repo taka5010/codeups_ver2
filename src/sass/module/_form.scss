@@ -3,28 +3,34 @@
 .form {
 	z-index: 10;
     position: relative;
-
 }
 
 .form dl {
 	display: flex;
 	flex-direction: column;
-
+	border-bottom: 1px dotted $green;
+	padding-bottom: rem(24);
 	@include mq(md) {
 		gap: rem(106);
-
 	}
 }
 
+.form dl:nth-child(n + 1) {
+	margin-top: rem(23);
+}
+
 .form dd {
+	margin-top: rem(15);
 	width: 100%;
 	@include mq(md) {
 		width: calc(480 / 700 * 100%);
 	}
 }
 
+
 .form input {
 	height: rem(40);
+	margin-top: 0;
 }
 ::placeholder {
 	color: #DDF0F1;
@@ -43,7 +49,11 @@
 	background-color: #C94800;
 	color: $white;
 	font-size: rem(12);
-	padding: rem(0) rem(16);
+	padding: rem(1) rem(11);
 	letter-spacing:0.4em;
 	text-indent: 0.4em;
+}
+
+.form__btn {
+	text-align: center;
 }
