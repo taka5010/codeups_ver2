@@ -67,8 +67,8 @@ textarea {
 	width: 100%;
   max-width: rem(300);
 	background: $back-cr;
-	border: 1px solid $border-cr-default;
-	border-radius: $border-r;
+	border: 1px solid $green;
+	// border-radius: $border-r;
 	/*↓↓↓↓不要ならコメントアウト or 削除 */
 	// &:hover {  //ホバーしたときの色
 	// 	border: 1px solid $border-cr;

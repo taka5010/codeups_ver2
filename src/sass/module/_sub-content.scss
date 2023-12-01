@@ -11,6 +11,13 @@
     }
 }
 
+.sub-content.sub-contact {
+    margin-top: rem(52);
+    @include mq(md) {
+        margin-top: rem(102);
+    }
+}
+
 .sub-content::before {
     position: absolute;
     content: "";

@@ -1,21 +1,34 @@
 @use "global" as *;
 
 .form {
-
-}
-
-.form__inner {
+	z-index: 10;
+    position: relative;
 
 }
 
 .form dl {
 	display: flex;
-	gap: rem(106)
+	flex-direction: column;
+
+	@include mq(md) {
+		gap: rem(106);
+
+	}
 }
 
 .form dd {
-	width: calc(480 / 700 * 100%);
+	width: 100%;
+	@include mq(md) {
+		width: calc(480 / 700 * 100%);
+	}
 }
+
+.form input {
+	height: rem(40);
+}
+::placeholder {
+	color: #DDF0F1;
+  }
 
 .form__title {
 	font-weight: $bold;

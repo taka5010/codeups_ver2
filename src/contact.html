@@ -105,7 +105,7 @@
         <span>TOP > お問い合わせ</span>
       </div>
     </div>
-    <div class="sub-contact">
+    <div class="sub-content sub-contact">
       <div class="sub-contact__inner inner">
         <div class="sub-contact__form form">
           <form action="" method="post" id="">
@@ -113,57 +113,60 @@
               <dt class="form__title">
                 <div class="form__title-text">お名前</div><span class="form__title-requirement">必須</span>
               </dt>
-              <dd class="form__body">
-                <label><input type="checkbox" name="hoge" value="チェックボックス1" checked/><span>チェックボックス1</span></label>
-                <label><input type="checkbox" name="hogehoge" value="チェックボックス2" checked/><span>チェックボックス2</span></label>
-              </dd>
-            </dl>
-            <dl>
-              <dt>タイプ：ラジオボタン</dt>
-              <dd class="">
-                <label><input type="radio" name="target" value="ラジオボタン" checked/><span>ラジオボタン</span></label>
-                <label><input type="radio" name="target" value="ラジオボタン2" /><span>ラジオボタン2</span></label>
+              <dd>
+                <input type="text" name="company" value="" placeholder="沖縄　太郎" />
               </dd>
             </dl>
             <dl>
               <dt class="form__title">
-                <div class="form__title-text">お名前</div><span class="form__title-requirement">必須</span>
+                <div class="form__title-text">メールアドレス</div><span class="form__title-requirement">必須</span>
               </dt>
               <dd>
-                <input type="text" name="company" value="" />
+                <input type="text" name="company" value="" placeholder="ご意見をお寄せ下さい。"/>
               </dd>
             </dl>
             <dl>
-              <dt>
-                タイプ：テキスト
+              <dt class="form__title">
+                <div class="form__title-text">メールアドレス</div><span class="form__title-requirement">必須</span>
               </dt>
               <dd>
-                <input type="text" name="company" value="" />
+                <input type="email" name="mail_address" value="" class="validate[]" placeholder="aaa000@ggmail.com"/>
               </dd>
             </dl>
             <dl>
-              <dt>
-                タイプ：メールアドレス
+              <dt class="form__title">
+                <div class="form__title-text">電話番号</div><span class="form__title-requirement">必須</span>
               </dt>
               <dd>
-                <input type="email" name="mail_address" value="" class="validate[]" />
+                <input type="tel" name="tel" value="" placeholder="000-000-0000" />
               </dd>
             </dl>
             <dl>
-              <dt>
-                タイプ：セレクト
+              <dt class="form__title">
+                <div class="form__title-text">お問合せ項目</div><span class="form__title-requirement">必須</span>
+              </dt>
+              <dd class="form__body">
+                <label><input type="checkbox" name="hoge" value="ダイビング講習について" checked/><span>ダイビング講習について</span></label>
+                <label><input type="checkbox" name="hogehoge" value="ファンデイビングについて" checked/><span>ファンデイビングについて</span></label>
+                <label><input type="checkbox" name="hogehoge" value="体験ダイビングについて" checked/><span>体験ダイビングについて</span></label>
+              </dd>
+            </dl>
+            <dl>
+              <dt class="form__title">
+                <div class="form__title-text">キャンペーン</div><span class="form__title-requirement">必須</span>
               </dt>
               <dd class="">
                 <select name="hoge" class="">
-                  <option value="">選択してください</option>
-                  <option value="セレクト1">セレクト1</option>
-                  <option value="セレクト2">セレクト2</option>
+                  <option value="">キャンペーン内容を選択</option>
+                  <option value="セレクト1">ダイビング講習について</option>
+                  <option value="セレクト2">ファンデイビングについて</option>
+                  <option value="セレクト2">体験ダイビングについて</option>
                 </select>
               </dd>
             </dl>
             <dl>
-              <dt>
-                タイプ：テキストボックス
+              <dt class="form__title">
+                <div class="form__title-text">お問合せ項目</div><span class="form__title-requirement">必須</span>
               </dt>
               <dd>
                 <textarea name="contents"></textarea>
@@ -172,9 +175,20 @@
             <div class="">
               <input type="button" class="" value="タイプ：ボタン" />
             </div>
+            <div class="form__confirmation">
+              <label>
+                <input type="checkbox" name="hoge" value="ダイビング講習について"/>
+                <span>個人情報の取り扱いについて同意のうえ送信します。</span>
+              </label>
+            </div>
+            <div class="form__btn">
+              <a href="#" class="button">
+                <span class="button__text">send</span>
+                <span class="button__arrow"></span>
+              </a>
+            </div>
           </form>
         </div>
-
       </div>
     </div>
    

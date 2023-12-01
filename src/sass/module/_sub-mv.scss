@@ -43,11 +43,16 @@
   font-size: rem(40);
   font-family: $number-font-family;
   line-height: 1;
-  text-transform: capitalize;
+  // text-transform: capitalize;
+  text-transform: lowercase; 
   @include mq(md) {
     font-size: rem(80);
     line-height: 1;
   }
+}
+
+.sub-mv__maintitle::first-letter {
+  text-transform: capitalize;
 }
 
 

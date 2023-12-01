@@ -55,7 +55,11 @@
 .button__text {
   position: relative;
   text-transform: lowercase;
-  display: inline-blok;
+  display: inline-block;
+}
+
+.button__text::first-letter {
+  text-transform: capitalize;
 }
 
 .button__arrow {
