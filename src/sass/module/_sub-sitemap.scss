@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.sub-sitemap {
+
+}
+
+.sub-sitemap__sitemap {
+    
+}
+
+.sub-sitemap__lists {
+    display: flex;
+    margin: auto;
+    width: rem(316);
+    margin-top: rem(40);
+    column-gap: rem(39);
+    margin-left: rem(23);
+}
+

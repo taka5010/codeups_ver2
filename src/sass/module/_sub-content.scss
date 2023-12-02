@@ -23,6 +23,12 @@
         margin-top: rem(102);
     }
 }
+.sub-content.sub-sitemap {
+    margin-top: rem(50);
+    @include mq(md) {
+        margin-top: rem(102);
+    }
+}
 
 .sub-content::before {
     position: absolute;
