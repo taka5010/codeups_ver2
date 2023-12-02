@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.sub-thanks {
+    text-align: center;
+    line-height: 1.4;
+    @include mq(md) {
+        padding-top: rem(45);
+    }
+}
+
+.sub-thanks__text + .sub-thanks__text {
+    margin-top: 35px;
+}
+
+.sub-thanks__footer {
+    @include mq(md) {
+        margin-top: rem(124);
+    }
+}

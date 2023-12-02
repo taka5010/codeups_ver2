@@ -198,6 +198,13 @@
   text-align: center;
 }
 
+.contact__footer {
+  margin-top: rem(145);
+  @include mq(md) {
+    margin-top: rem(160);
+  }
+}
+
 
 
 

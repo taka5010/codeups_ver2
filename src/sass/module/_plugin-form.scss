@@ -45,7 +45,7 @@ $check-space-betweenRadio: rem(20);//ラジオボタンの間の距離
 $check-weight: 2px;//チェックマークの線の太さ(px)
 
 /*テキストエリアの指定*/
-$textarea-height: rem(255);
+$textarea-height: rem(200);
 
 [type="text"],
 [type="search"],
@@ -61,7 +61,7 @@ textarea {
 	background-image: none;
 	font-family: inherit;
 	/*↓カスタム */
-  margin-top: rem(15);
+//   margin-top: rem(15);
 	font-size: $fz;
 	padding: $padding-und $padding-lnr;
 	width: 100%;
@@ -155,7 +155,6 @@ button,
 
 [type="checkbox"] {
 	display: none;
-
 	+ span {
 		display: inline-block;
 		position: relative;
@@ -165,7 +164,6 @@ button,
 		line-height: 1.6;
 		cursor: pointer;
 		transition: 0.3s ease;
-
 		&::before {
 			position: absolute;
 			content: "";
@@ -216,8 +214,9 @@ select {
 	width: 100%;
 	position: relative;
 	/*↓カスタム */
-  margin-top: rem(10);
-	font-size: $fz;
+//   margin-top: rem(10);
+	// font-size: $fz;
+	font-size: rem(12);
 	padding: $padding-und $padding-lnr;
 	background-color: $back-cr;
   border: 1px solid $green;
@@ -225,11 +224,17 @@ select {
 	/*↓デフォルトのアイコンを消す場合はコメントアウト（noneにする）*/
 	appearance: none;
 	/*↓デフォルトではないアイコンを使う場合は入力する*/
-	// background-image: url();
-	// background-position: right 12px center;
-	// background-repeat: no-repeat;
+	background-image: url(../images/common/arrow_down.png);
+	background-position: right 12px center;
+	background-repeat: no-repeat;
+	background-size: rem(12) rem(10);
+	height: rem(40);
 	&:focus {
 		border: 1px solid $border-cr;
+	}
+	@include mq(md) {
+		height: rem(30);
+		padding: 0;
 	}
 }
 

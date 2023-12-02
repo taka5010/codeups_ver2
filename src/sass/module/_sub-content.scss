@@ -17,6 +17,12 @@
         margin-top: rem(102);
     }
 }
+.sub-content.sub-thanks {
+    margin-top: rem(50);
+    @include mq(md) {
+        margin-top: rem(102);
+    }
+}
 
 .sub-content::before {
     position: absolute;
