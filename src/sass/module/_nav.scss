@@ -2,16 +2,17 @@
 
 .nav {
     display: flex;
+    justify-content: center;
     column-gap: rem(0);
     width: 100%;
     gap: rem(18);
     @include mq(md) {
-        justify-content: center;
-        gap: rem(40);
-        max-width: rem(1080);
-        margin-left: auto;
-        margin-right: auto;
+        justify-content: space-between;
     }
+}
+
+.nav--sitemap {
+    gap:rem(28)
 }
 
 .nav__columns--left,
@@ -20,8 +21,20 @@
     flex-direction: column;
     @include mq(md) {
         flex-direction: row;
-        width: 50%;
-        gap: rem(120)
+        justify-content: space-between;
+    }
+}
+
+.nav__columns--left {
+    @include mq(md) {
+        // width: calc(460 / 1080 * 100%);
+        width: calc(436 / 1008 * 100%);
+    }
+}
+
+.nav__columns--right {
+    @include mq(md) {
+        width: calc(452 / 1008 * 100%);
     }
 }
 
@@ -36,6 +49,7 @@
 .nav__item {
     line-height: calc(18 / 16);
     padding-left: rem(22);
+    white-space: nowrap;
 }
 
 .nav__item a{
@@ -50,20 +64,23 @@
     opacity: 0.3;
 }
 
-.nav__item--mt0.nav__item--mt0{
-    margin-top: 0;
-    @include mq(md) {
-    }
-}
-
 .nav__item:first-child {
     margin-top: rem(0);
     position: relative;
-    margin-top: rem(14);
     margin: 0;
+    margin-top: rem(14);
     font-weight: $bold;
+    // @include mq(md) {
+    //     margin-top: rem(0);
+    // }
 }
 
+.nav__item--mt0.nav__item--mt0{
+    margin-top: 0;
+    @include mq(md) {
+        margin-top: rem(14);
+    }
+}
 
 .nav__copy {
     font-size: rem(12);

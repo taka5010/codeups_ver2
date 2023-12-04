@@ -3,17 +3,28 @@
 .sub-sitemap {
 
 }
+.sub-sitemap__inner.inner {
+    padding-left: rem(20);
+    padding-right: rem(20);
+    @include mq(md) {
+        padding-left: rem(25);
+        padding-right: rem(25);
+    }
+}
 
 
 
 .sub-sitemap__content {
     margin: auto;
-    max-width: 21.875rem;
+    // max-width: 21.875rem;
     width: 100%;
 }
 
 .sub-sitemap__lists {
     margin-top: rem(40);
+    @include mq(md) {
+        padding-top: rem(34);
+    }
 }
 
 .sub-sitemap__lists .nav__item:first-child::before {
@@ -26,5 +37,9 @@
     left: 0;
     background-image: url(../images/common/hitode-green.png);
     background-size: contain;
+}
+
+.sub-sitemap__contact {
+    margin-top: rem(84);
 }
 
