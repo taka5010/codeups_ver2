@@ -4,11 +4,27 @@
 
 }
 
-.sub-sitemap__sitemap {
-    
+
+
+.sub-sitemap__content {
+    margin: auto;
+    max-width: 21.875rem;
+    width: 100%;
 }
 
 .sub-sitemap__lists {
     margin-top: rem(40);
+}
+
+.sub-sitemap__lists .nav__item:first-child::before {
+    content: "";
+    width: rem(18);
+    height: rem(18);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/common/hitode-green.png);
+    background-size: contain;
 }
 

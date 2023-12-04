@@ -50,6 +50,12 @@
     opacity: 0.3;
 }
 
+.nav__item--mt0.nav__item--mt0{
+    margin-top: 0;
+    @include mq(md) {
+    }
+}
+
 .nav__item:first-child {
     margin-top: rem(0);
     position: relative;
@@ -58,17 +64,6 @@
     font-weight: $bold;
 }
 
-.nav__item:first-child::before {
-    content: "";
-    width: rem(18);
-    height: rem(18);
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(../images/common/nav_title-hitode.png);
-    background-size: contain;
-}
 
 .nav__copy {
     font-size: rem(12);
