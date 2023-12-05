@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.sub-terms {
+}
+
+.sub-terms__content {
+    margin-top: rem(46);
+    line-height: 2;
+    @include mq(md) {
+        max-width: rem(800);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: rem(106);
+        padding-top: rem(37);
+    }
+}
+
+.sub-terms__inner {
+
+}
+
+.sub-terms__unit {
+    margin-top: rem(33);
+
+}
+
+.sub-terms__title {
+    font-size: rem(24);
+    font-weight: $medium;
+    @include mq(md) {
+        font-size: rem(32);
+    }
+}
+
+.sub-terms__text {
+
+}
+
+.sub-terms ol {
+    padding-left: rem(23);
+}
+
+.sub-terms__contact {
+    margin-top: rem(84);
+    @include mq(md) {
+        margin-top: rem(132);
+    }
+
+}
