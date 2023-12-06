@@ -12,14 +12,14 @@
   }
 }
 
-.information__inner {
-  padding-left: rem(15);
-  padding-right: rem(15);
-  @include mq(md) {
-    padding-left: $padding-pc;
-    padding-right: $padding-pc
-  }
-}
+// .information__inner {
+//   padding-left: rem(15);
+//   padding-right: rem(15);
+//   @include mq(md) {
+//     padding-left: $padding-pc;
+//     padding-right: $padding-pc
+//   }
+// }
 
 .information__content {
   margin-top: rem(28);
