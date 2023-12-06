@@ -4,12 +4,9 @@
   padding-top: rem(84);
   padding-bottom: rem(83);
   position: relative;
-  margin-top: rem(84);
   background-color: $bg-green;
-  // z-index: -1;
   @include mq(md) {
     padding-top: rem(99);
-    margin-top: rem(145);
     z-index: initial;
     padding-bottom: rem(104);
   }

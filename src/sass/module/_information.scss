@@ -2,20 +2,14 @@
 
 .information {
   position: relative;
-  margin-top: rem(85);
   background-color: $bg-green;
   padding-top: rem(84);
   padding-bottom: rem(84);
-  // z-index: -2;
   z-index: initial;
-  // position: relative;
   @include mq(md) {
-    margin-top: rem(140);
     padding-top: rem(100);
     padding-bottom: rem(102);
-    z-index: initial;
   }
-
 }
 
 .information__inner {

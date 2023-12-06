@@ -1,11 +1,6 @@
 @use "global" as *;
 
-.campaign {
-  margin-top: rem(45);
-  @include mq(md) {
-    margin-top: rem(120);
-  }
-}
+
 
 .campaign .swiper-slide:first-child {
   margin-left: 14px;
