@@ -36,11 +36,11 @@
 <body>
   <header>
     <div class="header__inner">
-      <h1 class="hader__logo">
+      <div class="hader__logo">
         <a href="#" class="header__link">
           <img src="./assets/images/common/logo.svg" alt="ヘッダーロゴ">
         </a>
-      </h1>
+      </div>
       <button class="header__drawer hamburger js-hamburger u-mobile">
         <span></span>
         <span></span>
@@ -89,9 +89,18 @@
     </div>
   </header>
   <main>
+    <div class="sub-mv">
+      <picture>
+        <source srcset="./assets/images/common/campaign_mv-sp.jpg" media="(max-width: 769px)"  />
+        <img src="./assets/images/common/campaign_mv-pc.jpg" alt="">
+      </picture>
+      <div class="sub-mv__text">
+        <h1 class="sub-mv__maintitle">campaign</h1>
+      </div>
+    </div>
     <div class="campaign-mv">
       <div class="campaign-mv__text">
-        <p class="campaign-mv__maintitle">campaign</p>
+        <h1 class="campaign-mv__maintitle">campaign</h1>
       </div>
     </div>
     <div class="campaign-breadcrumb">

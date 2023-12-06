@@ -42,10 +42,11 @@
 .sub-mv__maintitle {
   font-size: rem(40);
   font-family: $number-font-family;
+  font-weight: normal;
   line-height: 1;
-  // text-transform: capitalize;
   text-transform: lowercase; 
   white-space: nowrap;
+
   @include mq(md) {
     font-size: rem(80);
     line-height: 1;
