@@ -1,0 +1,65 @@
+
+@use "global" as *;
+
+.nf {
+    position: relative;
+    // height: rem(460);
+    background-image: url(../images/common/404_logo-sp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: $white;
+    margin-top: 85px;
+    @include mq(md) {
+        height: rem(698);
+    background-image: url(../images/common/404_logo-pc.png);
+    }
+}
+
+.nf__inner {
+    text-align: center;
+    padding-top: rem(55);
+    @include mq(md) {
+        padding-top: 140px;
+    }
+    // background-color: $green;
+    // padding-bottom: rem(200);
+}
+
+.nf__box {
+    // position: absolute;
+    // display: block;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+
+}
+
+.nf__title {
+    font-size: rem(80);
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    font-family: $number-font-family;
+    line-height: 1;
+    font-weight: normal;
+    @include mq(md) {
+        font-size: rem(160);
+    } 
+}
+
+.nf__text {
+    line-height: calc(24 / 16);
+    margin-top: rem(38);
+}
+
+.nf__btn {
+    position: relative;
+    text-align: center;
+    margin-top: rem(40);
+    z-index: 1;
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+

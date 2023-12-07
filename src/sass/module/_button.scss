@@ -23,9 +23,19 @@
   padding-left: 56px;
 }
 
+.button--404 {
+  color: $green;
+  background-color: $white;
+}
+
 .button:hover {
   background-color: $white;
   color: $green;
+}
+.button--404:hover {
+  background-color: $green;
+  color: $white;
+  border: 2px solid $white;
 }
 
 .button::before {
@@ -40,6 +50,10 @@
   transform-origin: left top;
   transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
   // z-index: -1;
+}
+
+.button--404::before {
+  background: $green;
 }
 
 .button:hover::before {
@@ -58,6 +72,10 @@
   height: 100%;
   border: rem(2) solid $green;
   z-index: -1;
+}
+
+.button--404::after {
+  border: rem(2) solid $white;
 }
 
 .button__text {
@@ -82,12 +100,13 @@
   margin-left: rem(8);
 }
 
+.button__arrow--404 {
+  background-color: $green;
+}
+
 
 .button__arrow::after {
     content:"";
-  position: absolute;
-  // top: rem(8);
-  // left: rem(75);
   position: absolute;
   width: rem(10);
   height:rem(1);
@@ -98,9 +117,9 @@
   transform-origin: top right;
 }
 
-// .button__text:hover {
-//   color: $green;
-// }
+.button__arrow--404::after {
+  background-color: $green;
+}
 
 .button:hover .button__text {
   color: $green;
@@ -113,6 +132,19 @@
 .button:hover .button__arrow::after {
   background: $green;
 }
+
+.button--404:hover .button__text--404 {
+  color: $white;
+}
+
+.button--404:hover .button__arrow--404 {
+  background: $white;
+}
+
+.button--404:hover .button__arrow--404::after {
+  background: $white;
+}
+
 
 // .button__text::before {
 //   content:"";
