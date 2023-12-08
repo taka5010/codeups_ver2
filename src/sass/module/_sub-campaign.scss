@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.sub-campaign {
+    position: relative;
+}
+
+.sub-campaign__inner {
+    position: relative;
+    margin-top: rem(48);
+    @include mq(md) {
+        margin-top: rem(146);
+    }
+}
+
+
+// .sub-campaign__inner::before {
+//     position: absolute;
+//     background-image: url(../images/common/contents-logo-1.png);
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     content: "";
+//     display: block;
+//     width: calc(120 / 375 * 100%);
+//     padding-bottom: calc(55 / 375 * 100%);
+//     top: rem(-25);
+//     z-index: -1;
+//     @include mq(md) {
+//       left: calc(50% - min(50vw, 613px));
+//       top: rem(-67);
+//       max-width: rem(301);
+//       width: calc(301 / 1130 * 100%);
+//       padding-bottom: calc(131 / 1130 * 100%);
+//     }
+//   }
+
+
+.sub-campaign__menu {
+    @include mq(md) {
+        max-width: rem(744);
+        width: 100%;
+    }
+}
+
+.sub-campaign__items {
+    margin-top: rem(38);
+}
+
+.sub-campaign__item.campaign__container +.sub-campaign__item.campaign__container {
+    margin-top: rem(38);
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+
+.sub-campaign__contact.contact {
+    margin-top: rem(102);
+	@include mq(md) {
+		margin-top: rem(141);
+	}
+}

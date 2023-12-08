@@ -9,10 +9,11 @@
     background-size: contain;
     background-position: center;
     color: $white;
-    margin-top: 85px;
+    margin-top: rem(80);
     @include mq(md) {
         height: rem(698);
-    background-image: url(../images/common/404_logo-pc.png);
+        background-image: url(../images/common/404_logo-pc.png);
+        background-position: 24%;
     }
 }
 
@@ -20,7 +21,8 @@
     text-align: center;
     padding-top: rem(55);
     @include mq(md) {
-        padding-top: 140px;
+        padding-top: rem(0);
+        margin-top: rem(88);;
     }
     // background-color: $green;
     // padding-bottom: rem(200);
@@ -49,7 +51,10 @@
 
 .nf__text {
     line-height: calc(24 / 16);
-    margin-top: rem(38);
+    margin-top: rem(7);
+    @include mq(md) {
+        margin-top: rem(43);
+    }
 }
 
 .nf__btn {
