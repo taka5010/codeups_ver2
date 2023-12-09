@@ -95,21 +95,15 @@
   line-height: calc( 24 / 16);
 }
 
-.information__btn {
-  text-align: center;
-  margin-top: rem(40);
-  position: relative;
-}
-
 // information-page
 
-.information__list{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: rem(20);
-  text-align: center;
-}
+// .information__list{
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   column-gap: rem(20);
+//   text-align: center;
+// }
 
-.information__list li {
-  background-color: $bg-green;
-}
+// .information__list li {
+//   background-color: $bg-green;
+// }

@@ -26,12 +26,7 @@
   }
 }
 
-.contact--information {
-  margin-top: rem(17);
-  @include mq(md) {
-    margin-top: rem(140);
-  }
-}
+
 
 .contact--blog-archive {
   margin-top: rem(110);
