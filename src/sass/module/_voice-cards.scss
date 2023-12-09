@@ -1,14 +1,12 @@
 @use "global" as *;
 
 .voice-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: rem(39);
     @include mq(md) {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-content: space-between;
         column-gap: rem(40);
+        row-gap: rem(82);
         }
-}
-
-.voice-cards__wrapper {
-    display: flex;
 }

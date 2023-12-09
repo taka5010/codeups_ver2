@@ -36,11 +36,11 @@
 <body>
   <header>
     <div class="header__inner">
-      <h1 class="hader__logo">
+      <div class="hader__logo">
         <a href="#" class="header__link">
           <img src="./assets/images/common/logo.svg" alt="ヘッダーロゴ">
         </a>
-      </h1>
+      </div>
       <button class="header__drawer hamburger js-hamburger u-mobile">
         <span></span>
         <span></span>
@@ -93,11 +93,11 @@
   <main>
     <div class="sub-mv">
       <picture>
-        <source srcset="./assets/images/common/mv_campaign-sp.jpg" media="(max-width: 769px)"  />
+        <source srcset="./assets/images/common/mv_campaign-sp.jpg" media="(max-width: 769px)"/>
         <img src="./assets/images/common/mv_campaign-pc.jpg" alt="">
       </picture>
       <div class="sub-mv__text">
-        <p class="sub-mv__maintitle">blog</p>
+        <h1 class="sub-mv__maintitle">blog</h1>
       </div>
     </div>
     <div class="breadcrumb">
@@ -105,10 +105,10 @@
         <span>TOP > blog一覧</span>
       </div>
     </div>
-    <section class="sub-content sub-blog">
-      <div class="sub-blog__inner inner">
-        <div class="sub-blog__wrapper">
-          <div class="sub-blog__items sub-blog-cards">
+    <section class="sub-content sub-archive">
+      <div class="sub-archive__inner inner">
+        <div class="sub-archive__wrapper">
+          <div class="sub-archive__items sub-blog-cards">
             <article class="blog-cards__item blog-card">
               <a href="#">
                 <figure class="blog-card__img">
@@ -300,20 +300,18 @@
               </a>
             </article>
           </div>
-          <div class="sub-blog__pagenation campaign-pagnation pagnation wp-pagenavi">
+          <div class="sub-archive__pagenation pagnation wp-pagenavi">
             <a class="previouspostslink" rel="prev" href="#"><</a>
             <div class="pagnation-num">
               <a class="page smaller" href="#">1</a>
               <a class="page smaller" href="#">2</a>
               <a class="page smaller" href="#">3</a>
               <a class="page smaller" href="#">4</a>
-              <a class="page smaller" href="#">5</a>
-              <a class="page smaller" href="#">6</a>
             </div>
             <a class="nextpostslink" rel="next" href="#">></a>
           </div>
         </div>
-        <div class="sub-blog__sideber sideber">
+        <div class="sub-archive__sideber sideber">
           <div class="sideber__contents">
             <h2 class="sideber__header">人気記事</h2>
             <div class="sideber__articles articles-cards">
@@ -428,7 +426,7 @@
         </div>
       </div>
     </section>
-    <section class="contact contact--blog-archive">
+    <section class="sub-archive__contact contact">
       <div class="contact__inner inner">
         <div class="contact__content">
           <div class="contact__company">

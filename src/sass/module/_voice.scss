@@ -55,23 +55,23 @@
   }
 }
 
-.voice__container + .voice__container {
-  margin-top: rem(40);
-  @include mq(md) {
-    margin-top: 0;
-  }
-}
+// .voice__container + .voice__container {
+//   margin-top: rem(40);
+//   @include mq(md) {
+//     margin-top: 0;
+//   }
+// }
 
-.voice__container:nth-child(n + 3) {
-  @include mq(md) {
-    margin-top: rem(20);
-  }
-}
+// .voice__container:nth-child(n + 3) {
+//   @include mq(md) {
+//     margin-top: rem(20);
+//   }
+// }
 
-.voice__container {
-  display: flex;
-  flex-direction: column;
-}
+// .voice__container {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 .voice__btn {
   margin-top: rem(40);

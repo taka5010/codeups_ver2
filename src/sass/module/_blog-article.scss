@@ -16,6 +16,7 @@
     padding-bottom: rem(5);
     @include mq(md) {
         padding-bottom: 0;
+        font-size: rem(32);
     }
 }
 
