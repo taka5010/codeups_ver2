@@ -13,3 +13,10 @@
     }
 }
 
+.sub-price__contact {
+    margin-top: rem(100);
+	@include mq(md) {
+		margin-top: rem(120);
+	}
+}
+
