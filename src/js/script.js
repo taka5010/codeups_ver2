@@ -91,6 +91,22 @@ $(document).ready(function(){
   $('#info-tab1').trigger('click');
 });
 
+
+$(function () {
+  // URLのハッシュ部分（id）を取得
+  const urlHash = location.hash;
+  // そのidを持つ要素がなかったら処理を抜ける
+  if (!$(urlHash).length) return;
+
+  // アコーディオンの要素を開く処理
+  $(urlHash)
+    .find('.sub-information__item')
+    .addClass('active')
+    .next()
+    .show();
+});
+
+
   // galleryのモーダル
   $(".js-modal img").click(function () {
     $(".about-gallery__grayDisplay").html($(this).prop("outerHTML"));
@@ -155,6 +171,71 @@ $(accordionSummary).each(function() {
 
 
 // test_finish
+
+// test
+
+$(function() {
+  // パラメータ取得
+  function getParam(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+ 
+  // ページ読み込み時のタブ切り替え
+  let tabPram = ['tab-1', 'tab-2', 'tab-3'];
+  let pram = getParam('active-tab');
+  if (pram && $.inArray(pram, tabPram) !== -1) {
+    $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
+    $('[data-tab="' + pram + '"]').addClass('is-active');
+  }
+ 
+  // ロード後のタブ切り替え
+  $('.js-tab-switch').on('click', function() {
+    let dataPram = $(this).data('tab');
+    $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
+    $('[data-tab="' + dataPram + '"]').addClass('is-active');
+  });
+});
+
+// test-fin
+
+// test2
+$(function () {
+  //タブの実装
+$(".tab_box .tab_btn").click(function () {
+   var index = $(".tab_box .tab_btn").index(this);
+   $(".tab_box .tab_btn, .tab_box .tab_panel").removeClass("active");
+   $(this).addClass("active");
+   $(".tab_box .tab_panel").eq(index).addClass("active");
+});
+});
+
+$(function () {
+  var hash = location.hash;
+  hash = (hash.match(/^#tab_panel-\d+$/) || [])[0];
+
+  if ($(hash).length) {
+      var tabname = hash.slice(1);
+  } else {
+      var tabname = "tab_panel-1";
+  }
+  //コンテンツ非表示・タブを非アクティブ
+  $(".tab_box .tab_btn").removeClass("active");
+  $(".tab_box .tab_panel").removeClass("active");
+  //何番目のタブかを格納
+  var tabno = $(".tab_box .tab_panel#" + tabname).index();
+  //コンテンツ表示
+  $(".tab_box .tab_panel").eq(tabno).addClass("active");
+  //タブのアクティブ化
+  $(".tab_box .tab_btn").eq(tabno).addClass("active");
+});
+
+// test2-fin
 
 
 
