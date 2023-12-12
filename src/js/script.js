@@ -77,36 +77,30 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
 //information-page ----------------------------
 
-$(document).ready(function(){
-  $('.js-info').click(function(){
-      var tab_id = $(this).attr('id');
-
-      $('.js-info').removeClass('active');
-      $('.tab').hide();
-
-      $(this).addClass('active');
-      $("#info-content" + tab_id.substr(8)).fadeIn(500);
+$(function() {
+  function getParam(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
+  let tabPram = ['tab-1', 'tab-2', 'tab-3'];
+  let pram = getParam('active-tab');
+  if (pram && $.inArray(pram, tabPram) !== -1) {
+    $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
+    $('[data-tab="' + pram + '"]').addClass('is-active');
+  }
+  $('.js-tab-switch').on('click', function() {
+    let dataPram = $(this).data('tab');
+    $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
+    $('[data-tab="' + dataPram + '"]').addClass('is-active');
   });
-
-  $('#info-tab1').trigger('click');
 });
 
-
-$(function () {
-  // URLのハッシュ部分（id）を取得
-  const urlHash = location.hash;
-  // そのidを持つ要素がなかったら処理を抜ける
-  if (!$(urlHash).length) return;
-
-  // アコーディオンの要素を開く処理
-  $(urlHash)
-    .find('.sub-information__item')
-    .addClass('active')
-    .next()
-    .show();
-});
-
-
+//about-page ----------------------------
   // galleryのモーダル
   $(".js-modal img").click(function () {
     $(".about-gallery__grayDisplay").html($(this).prop("outerHTML"));
@@ -129,113 +123,49 @@ $(function () {
     $(window).scrollTop(scrollPosition);
   });
 
+  //faq-page ----------------------------
+  let accordionDetails = '.js-faq-item';
+  let accordionSummary = '.js-faq-item__summary';
+  let accordionContent = '.js-faq-item__content';
+  let speed2 = 300;
+  
+  $(accordionSummary).each(function() {
+    if ($(this).parent($(accordionDetails)).attr("open")) {
+      $(this).addClass("is-active");
+    }
+  
+    $(this).on("click", function(event) {
+      event.preventDefault();
+      $(this).toggleClass("is-active");
+  
+      if ($(this).parent($(accordionDetails)).attr("open")) {
+        $(this).nextAll($(accordionContent)).slideUp(speed2, function() {
+          $(this).parent($(accordionDetails)).removeAttr("open");
+        });
+      } else {
+        $(this).parent($(accordionDetails)).attr("open", "true");
+        $(this).nextAll($(accordionContent)).hide().slideDown(speed2);
+      }
+    })
+  });
+
 
 });
 
 
+
 // test
 
-// let accordionDetails = '.js-details';
-let accordionDetails = '.js-faq-item';
-let accordionSummary = '.js-faq-item__summary';
-let accordionContent = '.js-faq-item__content';
-let speed = 300
 
-$(accordionSummary).each(function() {
-  if ($(this).parent($(accordionDetails)).attr("open")) {
-    $(this).addClass("is-active");
-  }
-
-
-  $(this).on("click", function(event) {
-  	// デフォルトの挙動を無効化
-    event.preventDefault();
-    // summaryにis-activeクラスを切り替え
-    $(this).toggleClass("is-active");
-
-    if ($(this).parent($(accordionDetails)).attr("open")) {
-      // アコーディオンを閉じるときの処理
-      $(this).nextAll($(accordionContent)).slideUp(speed, function() {
-        // アニメーションの完了後にopen属性を取り除く
-        $(this).parent($(accordionDetails)).removeAttr("open");
-      });
-    } else {
-      // アコーディオンを開くときの処理
-      // open属性を付ける
-      $(this).parent($(accordionDetails)).attr("open", "true");
-      // いったんdisplay:none;してからslideDownで開く
-      $(this).nextAll($(accordionContent)).hide().slideDown(speed);
-    }
-  })
-})
 
 
 // test_finish
 
-// test
 
-$(function() {
-  // パラメータ取得
-  function getParam(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-      results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-  }
- 
-  // ページ読み込み時のタブ切り替え
-  let tabPram = ['tab-1', 'tab-2', 'tab-3'];
-  let pram = getParam('active-tab');
-  if (pram && $.inArray(pram, tabPram) !== -1) {
-    $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
-    $('[data-tab="' + pram + '"]').addClass('is-active');
-  }
- 
-  // ロード後のタブ切り替え
-  $('.js-tab-switch').on('click', function() {
-    let dataPram = $(this).data('tab');
-    $('.js-tab-cts,.js-tab-switch').removeClass('is-active');
-    $('[data-tab="' + dataPram + '"]').addClass('is-active');
-  });
-});
 
-// test-fin
 
-// test2
-$(function () {
-  //タブの実装
-$(".tab_box .tab_btn").click(function () {
-   var index = $(".tab_box .tab_btn").index(this);
-   $(".tab_box .tab_btn, .tab_box .tab_panel").removeClass("active");
-   $(this).addClass("active");
-   $(".tab_box .tab_panel").eq(index).addClass("active");
-});
-});
 
-$(function () {
-  var hash = location.hash;
-  hash = (hash.match(/^#tab_panel-\d+$/) || [])[0];
 
-  if ($(hash).length) {
-      var tabname = hash.slice(1);
-  } else {
-      var tabname = "tab_panel-1";
-  }
-  //コンテンツ非表示・タブを非アクティブ
-  $(".tab_box .tab_btn").removeClass("active");
-  $(".tab_box .tab_panel").removeClass("active");
-  //何番目のタブかを格納
-  var tabno = $(".tab_box .tab_panel#" + tabname).index();
-  //コンテンツ表示
-  $(".tab_box .tab_panel").eq(tabno).addClass("active");
-  //タブのアクティブ化
-  $(".tab_box .tab_btn").eq(tabno).addClass("active");
-});
-
-// test2-fin
 
 
 
