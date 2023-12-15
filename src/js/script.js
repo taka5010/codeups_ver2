@@ -150,16 +150,24 @@ $(function() {
   });
 
 
+// リンク先でヘッダーの重なりを防ぐ
+  const url = $(location).attr('href'),
+	headerHeight = $('header').outerHeight() + 30;
+
+	if(url.indexOf("#") != -1){
+		const anchor = url.split("#"),
+		target = $('#' + anchor[anchor.length - 1]),
+		position = Math.floor(target.offset().top) - headerHeight;
+		$("html, body").animate({scrollTop:position}, 500);
+	}
+
 });
 
 
 
-// test
 
 
 
-
-// test_finish
 
 
 

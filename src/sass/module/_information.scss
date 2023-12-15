@@ -95,6 +95,16 @@
   line-height: calc( 24 / 16);
 }
 
+.information__btn {
+  text-align: center;
+  margin-top: rem(41);
+  position: relative;
+  z-index: 10;
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}
+
 // information-page
 
 // .information__list{
