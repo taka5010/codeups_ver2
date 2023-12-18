@@ -6,6 +6,7 @@
 .sub-terms__content {
     margin-top: rem(46);
     line-height: 2;
+    position: relative;
     @include mq(md) {
         max-width: rem(800);
         width: 100%;

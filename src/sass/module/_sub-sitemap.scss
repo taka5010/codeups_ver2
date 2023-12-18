@@ -21,6 +21,7 @@
 }
 
 .sub-sitemap__lists {
+    position: relative;
     margin-top: rem(40);
     @include mq(md) {
         padding-top: rem(34);

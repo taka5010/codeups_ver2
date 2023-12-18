@@ -22,26 +22,13 @@
     }
 }
 
-// .sub-blog__inner--detail.inner {
-//     padding-left: rem(15);
-//     padding-right: rem(15);
-//     @include mq(md) {
-//         padding-left: rem(25);
-//         padding-right: rem(25);
-//     }
-// }
-
 .sub-blog__wrapper {
+    position: relative;
     @include mq(md) {
         width: calc( 706 / 1080 * 100%);
         margin-top: rem(46);
     }
 }
-// .sub-blog__wrapper--detail {
-//     @include mq(md) {
-
-//     }
-// }
 
 .sub-blog__sideber {
     margin-top: rem(20);
